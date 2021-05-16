@@ -1,0 +1,15 @@
+Index: app/src/main/java/com/example/expensemanager/data/TransactionListDao.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/expensemanager/data/TransactionListDao.kt	(date 1619942819410)
++++ app/src/main/java/com/example/expensemanager/data/TransactionListDao.kt	(date 1619942819410)
+@@ -43,5 +43,5 @@
+     fun getSumMonth(monthYear: Long): LiveData<Float>
+ 
+     @Query("SELECT monthYear FROM `Transaction` GROUP BY monthYear")
+-    fun getMonths():LiveData<List<Date>>
++    fun getMonths():LiveData<List<Long>>
+ }
+\ No newline at end of file

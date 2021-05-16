@@ -1,0 +1,47 @@
+Index: app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619363885043)
++++ app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619363885043)
+@@ -115,8 +115,6 @@
+         })
+         //setting pie chart initially to 0
+         setPieChart()
+-        cash.text = "CASH : ${cashAmount}"
+-        bank.text = "BANK : ${bankAmount}"
+         //observing the cash details and the bank details to update the text view and the pie chart
+         observeBalance()
+         //GraphCardView code
+@@ -150,8 +148,6 @@
+             editor.apply()
+             //setting the pie chart with new values
+             setPieChart()
+-            cash.text = "CASH : ${cashAmount}"
+-            bank.text = "BANK : ${bankAmount}"
+             mAlertDialog.dismiss()
+         }
+         dialog.cancel_details.setOnClickListener { mAlertDialog.dismiss() }
+@@ -164,8 +160,8 @@
+             "Balance_details",
+             Context.MODE_PRIVATE
+         )
+-        cashAmount = prefs.getFloat("cashAmount", 0F)
+-        bankAmount = prefs.getFloat("bankAmount", 0F)
++        val cashAmount = prefs.getFloat("cashAmount", 0F)
++        val bankAmount = prefs.getFloat("bankAmount", 0F)
+         viewModel.cashAmount.observe(viewLifecycleOwner, Observer {
+             if (it != null) {
+                 cash.text = "CASH : ${cashAmount + it}"
+@@ -189,8 +185,8 @@
+         val bankAmount = sharedPreferences.getFloat("bankAmount", 0f)
+         Log.d("pieCash",cashAmount.toString())
+         Log.d("pieBank",bankAmount.toString())
+-//        cash.text = "CASH : ${cashAmount}"
+-//        bank.text = "BANK : ${bankAmount}"
++        cash.text = "CASH : ${cashAmount}"
++        bank.text = "BANK : ${bankAmount}"
+ 
+         val pieEntries = arrayListOf<PieEntry>()
+         pieEntries.add(PieEntry(cashAmount))

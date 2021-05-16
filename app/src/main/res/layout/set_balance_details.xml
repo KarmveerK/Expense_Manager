@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cards"
+    android:padding="10dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_details"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="SAVE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/cancel_details"
+        app:layout_constraintStart_toStartOf="@+id/bank_amount"
+        app:layout_constraintTop_toBottomOf="@+id/bank_amount"
+        app:strokeColor="@color/blue2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cash_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:divider="@color/white"
+        android:hint="CASH"
+        android:textColorHint="#B2FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#B2FFFFFF"
+        app:hintTextColor="#B2FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:startIconDrawable="@drawable/ic_baseline_attach_money_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#B3FFFFFF"
+            android:textColorHighlight="#B3FFFFFF"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bank_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="BANK"
+        android:textColorHint="#B2FFFFFF"
+        app:boxStrokeColor="#B2FFFFFF"
+        app:hintTextColor="#B2FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/cash_amount"
+        app:layout_constraintStart_toStartOf="@+id/cash_amount"
+        app:layout_constraintTop_toBottomOf="@id/cash_amount"
+        app:startIconDrawable="@drawable/ic_baseline_attach_money_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#B3FFFFFF"
+            android:textColorHighlight="#B3FFFFFF"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_details"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="CANCEL"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bank_amount"
+        app:layout_constraintStart_toEndOf="@+id/save_details"
+        app:layout_constraintTop_toTopOf="@+id/save_details"
+        app:strokeColor="@color/blue2" />
+
+    <TextView
+        android:id="@+id/set_balance_details_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Set balance details"
+        android:textColor="#B2FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Enter the amount of money you have in cash and in your bank account."
+        android:textColor="#9AFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/cash_amount"
+        app:layout_constraintEnd_toEndOf="@id/set_balance_details_label"
+        app:layout_constraintStart_toStartOf="@+id/set_balance_details_label"
+        app:layout_constraintTop_toBottomOf="@+id/set_balance_details_label"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

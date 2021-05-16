@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/transactionListFragment"
+        android:name="com.example.expensemanager.ui.TransactionListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_transaction_list" >
+        <action
+            android:id="@+id/action_transactionListFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment" />
+        <action
+            android:id="@+id/action_transactionListFragment_to_allTransactionsFragment"
+            app:destination="@id/allTransactionsFragment" />
+        <action
+            android:id="@+id/action_transactionListFragment_to_calanderViewFragment"
+            app:destination="@id/calanderViewFragment" />
+        <action
+            android:id="@+id/action_transactionListFragment_to_monthlyCardsFragment"
+            app:destination="@id/monthlyCardsFragment" />
+        <action
+            android:id="@+id/action_transactionListFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionDetailFragment"
+        android:name="com.example.expensemanager.ui.TransactionDetailFragment"
+        android:label="fragment_task_detail"
+        tools:layout="@layout/fragment_transaction_detail" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.expensemanager.ui.onboardingScreen.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_transactionListFragment"
+            app:destination="@id/transactionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allTransactionsFragment"
+        android:name="com.example.expensemanager.ui.AllTransactionsFragment"
+        android:label="fragment_all_transactions"
+        tools:layout="@layout/fragment_all_transactions" >
+        <action
+            android:id="@+id/action_allTransactionsFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calanderViewFragment"
+        android:name="com.example.expensemanager.ui.calanderView.CalanderViewFragment"
+        android:label="fragment_calander_view"
+        tools:layout="@layout/fragment_calander_view" />
+    <fragment
+        android:id="@+id/monthlyCardsFragment"
+        android:name="com.example.expensemanager.ui.monthlyCards.MonthlyCardsFragment"
+        android:label="fragment_monthly_cards"
+        tools:layout="@layout/fragment_monthly_cards" >
+        <action
+            android:id="@+id/action_monthlyCardsFragment_to_monthDetailFragment"
+            app:destination="@id/monthDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monthDetailFragment"
+        android:name="com.example.expensemanager.ui.monthlyCards.MonthDetailFragment"
+        android:label="fragment_month_detail"
+        tools:layout="@layout/fragment_month_detail" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+</navigation>

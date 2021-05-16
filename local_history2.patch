@@ -1,0 +1,24 @@
+Index: app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619159541035)
++++ app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619159541035)
+@@ -40,14 +40,14 @@
+             layoutManager = LinearLayoutManager(activity)
+             adapter = TransactionAdapter {
+                 findNavController().navigate(
+-                    TaskListFragmentDirections.actionTaskListFragmentToTaskDetailFragment(it)
++                    TransactionListFragmentDirections.actionTaskListFragmentToTaskDetailFragment(it)
+                 )
+             }
+         }
+ 
+         add_transaction.setOnClickListener{
+             findNavController().navigate(
+-                TaskListFragmentDirections.actionTaskListFragmentToTaskDetailFragment(
++                TransactionListFragmentDirections.actionTaskListFragmentToTaskDetailFragment(
+                     0
+                 )
+             )

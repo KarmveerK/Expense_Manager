@@ -1,0 +1,21 @@
+Index: app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619334915429)
++++ app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619334915429)
+@@ -214,13 +214,6 @@
+         pieData.setDrawValues(true)
+ 
+         piechart.data = pieData
+-//        piechart?.addPieSlice(
+-//                PieModel("Cash", cashAmount, Color.parseColor("#F44336"))
+-//        )
+-//        piechart?.addPieSlice(
+-//                PieModel("Bank", bankAmount, Color.parseColor("#2196F3"))
+-//        )
+-//        piechart?.startAnimation()
+     }
+     fun getColorWithAlpha(color: Int, ratio: Float): Int {
+         var newColor = 0

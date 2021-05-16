@@ -1,0 +1,21 @@
+Index: app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619177845240)
++++ app/src/main/java/com/example/expensemanager/ui/TransactionListFragment.kt	(date 1619177845240)
+@@ -125,11 +125,11 @@
+         val bankAmount = prefs.getFloat("bankAmount", 0F)
+         viewModel.cashAmount.observe(viewLifecycleOwner, Observer{
+             if (it!=null)
+-                cash.text = (cashAmount-it).toString()
++                cash.text = "CASH : ${cashAmount+it}"
+         })
+         viewModel.bankAmount.observe(viewLifecycleOwner, Observer{
+             if (it!=null)
+-                bank.text = (bankAmount-it).toString()
++                bank.text = "BANK : ${bankAmount+it}"
+         })
+     }
+ 
